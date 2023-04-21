@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> countBits(int n) {
+        vector<int> c;
+        int co=0;
+        for(int t=0;t<=n;t++)
+        { 
+            int i=t;
+           while(i!=0)
+           {if((i&1)==1)
+           {co++;}
+               i=i>>1;
+           }
+            c.push_back(co);
+            co=0;
+        }
+        return c;
+    }
+    
+};

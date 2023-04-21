@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int a=0;
+        int e=nums[0];
+        for(int num:nums)
+        {
+            if(a==0)
+            {
+                e=num;
+            }
+            if(e==num)
+            {
+                a++;
+            }
+            else
+            {
+                a--;
+            }
+        }
+        return e;
+    }
+};
